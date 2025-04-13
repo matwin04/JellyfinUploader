@@ -1,0 +1,10 @@
+services:
+  jellyfin-uploader:
+    image: jellyfin-uploader
+    build: .
+    container_name: jellyfin-uploader
+    ports:
+      - "8083:8083"
+    volumes:
+      - /NAS/MediaNet:/media
+    restart: unless-stopped

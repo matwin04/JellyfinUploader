@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload to Jellyfin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Upload Media</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="media" required><br><br>
+        <label for="type">Media Type:</label>
+        <select name="type" required>
+            <option value="Movies">Movie</option>
+            <option value="Shows">TV Show</option>
+            <option value="Music">Music</option>
+            <option value="Photos">Photo</option>
+        </select><br><br>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
